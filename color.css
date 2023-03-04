@@ -9,6 +9,7 @@
 html{
     scroll-behavior: smooth;
 }
+
 .contenedor-header{
     background-color: #1e2326;
     position: fixed;
@@ -45,6 +46,18 @@ html{
 }
 .contenedor-header header nav ul li a:hover{
     color: #1cb698;
+}
+#barra-progreso {
+    --scrollAmount: 0%;
+    
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    width: var(--scrollAmount);
+    /*  background: linear-gradient(to right, #F24E1E var(--scrollAmount), transparent 0);
+    width: 100%; */
+    
+    height: 5px;
+    position: fixed;
+    top: 60px;
 }
 .nav-responsive{
     background-color: #1cb698;
@@ -176,6 +189,15 @@ html{
 }
 .sobremi .fila .col .contenedor-intereses .interes:hover{
     background-color: #1cb698;
+}
+.sobremi .fila .col .contenedor-intereses .interes a:link{
+    color: #fff;
+}
+.sobremi .fila .col .contenedor-intereses .interes a:visited{
+    color: #fff;
+}
+.sobremi .fila .col .contenedor-intereses .interes a:hover{
+    color: hotpink;
 }
 .sobremi .fila .col .contenedor-intereses .interes i{
     font-size: 30px;

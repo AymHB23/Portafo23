@@ -1,3 +1,15 @@
+//Barra de progreso de lectura
+let processScroll = () => {
+    let docElem = document.documentElement, 
+        docBody = document.body,
+        scrollTop = docElem['scrollTop'] || docBody['scrollTop'],
+        scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight,
+        scrollPercent = scrollTop / scrollBottom * 100 + '%';
+// console.log(scrollTop + ' / ' + scrollBottom + ' / ' + scrollPercent);    
+    document.getElementById("barra-progreso").style.setProperty("--scrollAmount", scrollPercent); 
+    document.addEventListener('scroll', processScroll);
+}
+document.addEventListener('scroll', processScroll)
 let menuVisible=false;
 //Oculta o muestra el menu
 function mostrarOcultarMenu(){

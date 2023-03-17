@@ -5,52 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="B:\Normalize css\normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://kit.fontawesome.com/ef0433d7f4.css" crossorigin="anonymous">
     <title>Portfolio</title>
     <link rel="icon" href="Img/yo.ico">
 </head>
 <body>
-    <!--MENU ENCABEZADO-->
-    <div class="contenedor-header">
-        <header>
-            <div class="logo">
-                <a href="a">Aym</a>
-            </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portafolio" onclick="seleccionar()">PORTAFOLIO</a></li>
-                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
-                </ul>
-            </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars"></i>
-
-            </div>
-            <div id="barra-progreso"></div>
-        </header>
-    </div>
+    <!--HEADER-->
     <!--SECCION INICIO-->
 
-    <section id="inicio" class="inicio">
-        <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="img/yo.jpg" alt="Leon Mariano">  
-            </div>
-            <h1>MARIANO LEON</h1>
-            <h2>Developer</h2>
-            <div class="redes">
-                <a href="https://www.facebook.com/MarianoLeonHB" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/marianoleon_ok" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-        </div>   
+    <section  class="inicio">
+    
+        <header class="nav">
+            <a href="#" class="logo"><span>Mi</span>Portafolio_</a>
+            <ul>
+                <li class="active"><i class="fa-solid fa-headphones"></i><a href="#">Home</a></li>
+                <li class="nav__li"><a href="#sobremi" onclick="seleccionar()">Sobremi</a></li>
+                <li class="nav__li"><i class="fa-regular fa-earth-americas"></i><a href="#">Skills</a></li>
+                <li class="nav__li"><a href="#">Curriculum</a></li>
+                <li class="nav__li"><a href="#">Portafolio</a></li>
+                <li class="nav__li"><a href="#">Contacto</a></li>
+            </ul>
+        </header>
+        <div class="contenido">
+            <h3>Hey_</h3>
+            <h2>I Am <span id="text"> </span></h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit, error magni quo eligendi 
+            obcaecati et excepturi odio, esse labore nulla rem. Ab minus ducimus aperiam est velit dolore, 
+            molestiae distinctio?</p>
+            <button>Hire Me</button>
+            <button class="chat"><ion-icon name="chatbubbles-outline"></ion-icon> Let's Chat</button>
+
+
+        </div>
+        
+        <section class="stars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
+        <div id="particles-js"></div>
+
     </section>
+    
     <!--SECCION SOBRE MI-->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
@@ -410,10 +415,20 @@ software like Aldus PageMaker including versions of Lorem Ipsum.
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
     </footer>
-
+    
+    <script src="particles/particles.min.js"></script>
+    <script src="particles/particlesjs-config (1).json"></script>
     <script src="script.js"></script>
-
-
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        let typingText = new Typed ("#text", {strings : ["Mariano", "Designer", "Coder"], 
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1000,
+    });
+    </script>
 </body>
 </html>

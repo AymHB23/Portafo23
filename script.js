@@ -14,16 +14,16 @@ let menuVisible=false;
 //Oculta o muestra el menu
 function mostrarOcultarMenu(){
     if(menuVisible){
-        document.getElementById("nav").classList="";
+        document.getElementById("navbar").classList="";
         menuVisible=false;
     }else{
-        document.getElementById("nav").classList="responsive";
+        document.getElementById("navbar").classList="responsive";
         menuVisible=true;
     }
 }
 function seleccionar(){
     //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList ="";
+    document.getElementById("navbar").classList ="";
     menuVisible=false; 
 }
 //Funcion Animaciones a las habilidades
@@ -49,3 +49,57 @@ function efectoHabilidades(){
 window.onscroll=function(){
     efectoHabilidades();
 }
+/* Mouse
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+    "#0c2d5c", 
+    "#11396b",
+    "#15467a",
+    "#195389",
+    "#1c6098", 
+    "#1f6ea7", 
+    "#237cb6", 
+    "#268bc5",
+    "#2a99d4", 
+    "#2ea8e2", 
+    "#33b8f1", 
+    "#38c7ff"
+];
+*/
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
